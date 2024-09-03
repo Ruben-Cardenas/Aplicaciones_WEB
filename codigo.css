@@ -1,0 +1,36 @@
+/* Cambia el color de fondo de un elemento */
+elemento {
+    background-color: #3498db; /* Azul */
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Centra un div dentro de su contenedor padre horizontalmente */
+div {
+    width: 50%; /* Ancho del div */
+    margin: 0 auto; /* Centración horizontal */
+}
+
+#container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Diferencia entre 'id' y 'class' */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML y JavaScript Diagnóstico</title>
+    <!-- Enlaza con el archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to the Quiz</h1>
+        <p id="question">What is the capital of France?</p>
+        <button class="button" onclick="checkAnswer()">Submit Answer</button>
+    </div>
+
+    <script>
+        /* Pregunta: ¿Cuál es la función de 'document.getElementById' en JavaScript? 
+        La función document.getElementById en JavaScript se utiliza para seleccionar y acceder a un elemento del DOM (Document Object Model) que tiene un atributo id específico. 
+        Esta función devuelve una referencia al primer elemento en el documento que coincide con el valor del id proporcionado.*/
+        function checkAnswer() {
+            /* Pregunta: ¿Qué hace 'prompt' y cómo se puede usar en lugar de 'alert'? 
+            La función prompt en JavaScript se utiliza para mostrar un cuadro de diálogo que solicita al usuario que ingrese algún dato. A diferencia de alert, que simplemente muestra un mensaje y no permite interacción, 
+            prompt permite al usuario escribir una respuesta que se puede utilizar en el código.*/
+            let answer = prompt("Enter your answer:");
+
+            /* Pregunta: ¿Cuál es el propósito de la instrucción 'if' en este fragmento de código? 
+            La instrucción if en JavaScript se utiliza para ejecutar un bloque de código solo si se cumple una condición específica. Permite tomar decisiones en el flujo de ejecución del programa. */
+            if (answer.toLowerCase() === 'paris') {
+                alert("Correct!");
+            } else {
+                alert("Try again!");
+            }
+        }
+
+        /* Pregunta: ¿Cómo se puede manipular el DOM usando JavaScript para cambiar el contenido de un elemento? 
+        Seleccionar el elemento: Usa uno de los métodos del DOM para obtener una referencia al elemento que deseas modificar. Algunos métodos comunes son getElementById, getElementsByClassName, getElementsByTagName, y querySelector.
+
+        Modificar el contenido: Una vez que tienes una referencia al elemento, puedes cambiar su contenido usando propiedades como innerHTML, textContent, o value (para elementos de formulario como <input>).*/
+        document.getElementById("question").innerText = "What is the capital of Spain?";
+    </script>
+</body>
+</html>
+
+
+
+/*¿Qué propiedad CSS se usa para cambiar el color de fondo de un elemento?
+
+css
+Copiar código
+elemento {
+    background-color: #3498db; /* Azul */
+}
+¿Cómo se centra un div dentro de su contenedor padre horizontalmente?
+
+css
+Copiar código
+div {
+    width: 50%; /* Ancho del div */
+    margin: 0 auto; /* Centración horizontal */
+}
+¿Cuál es la diferencia entre 'id' y 'class' en CSS?
+
+ID: Se utiliza para identificar un único elemento en la página. Cada id debe ser único en el documento.
+Class: Se utiliza para agrupar varios elementos que comparten el mismo estilo. Puedes aplicar la misma clase a múltiples elementos en la página.
+¿Cuál es la función de 'document.getElementById' en JavaScript?
+
+La función document.getElementById se utiliza para seleccionar y acceder a un elemento del DOM que tiene un atributo id específico. Devuelve una referencia al primer elemento en el documento que coincide con el valor del id proporcionado.
+
+¿Qué hace 'prompt' y cómo se puede usar en lugar de 'alert'?
+
+La función prompt muestra un cuadro de diálogo que solicita al usuario que ingrese algún dato. A diferencia de alert, que solo muestra un mensaje sin interacción, prompt permite al usuario escribir una respuesta que se puede utilizar en el código.
+
+¿Cuál es el propósito de la instrucción 'if' en este fragmento de código?
+
+La instrucción if se utiliza para ejecutar un bloque de código solo si se cumple una condición específica. Permite tomar decisiones en el flujo de ejecución del programa.
+
+¿Cómo se puede manipular el DOM usando JavaScript para cambiar el contenido de un elemento?
+
+Seleccionar el elemento: Usa métodos del DOM como getElementById, getElementsByClassName, getElementsByTagName, o querySelector.
+Modificar el contenido: Una vez que tienes una referencia al elemento, cambia su contenido usando propiedades como innerHTML, textContent, o value (para campos de formulario). */
