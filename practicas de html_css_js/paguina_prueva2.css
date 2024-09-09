@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #007ACC;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-color: #e0f7fa;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #007ACC;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #005999;
+}
+
+#productos {
+    padding: 50px;
+    text-align: center;
+}
+
+.productos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.producto button {
+    padding: 10px 15px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #005999;
+}
+
+.contacto {
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contacto input, .contacto textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contacto button {
+    padding: 10px 20px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #005999;
+}
+
+footer {
+    background-color: #007ACC;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}

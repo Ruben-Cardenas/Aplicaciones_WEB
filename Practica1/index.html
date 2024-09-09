@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI primera paguina</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al stylsheet de la página (completar) -->
+    <img src="leon" alt="leon" width="1500" height="300">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#sobre mi">Sobre mi</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="Inicio">
+        <h1>Paguina sobre mi</h1>
+        <p>En esta paguina se describa el usuario donde se dara el contacto y la descipcion de la personq</p>
+    </section>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre mi">
+        <h2>Caosas sobre mi</h2>
+        <ul>
+            <li> Soy alto</li>
+            <li> Tengo el pelo cafe </li>
+            <li> Mis ojos son de color cafe </li>
+            <a href="https://docs.google.com/" target=" _blank">Google</a>
+        </ul>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Comentarios</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <br>
+            <input type="submit" value="Enviar informacion">
+        </form>
+    </section>
+</body>
+</html>
