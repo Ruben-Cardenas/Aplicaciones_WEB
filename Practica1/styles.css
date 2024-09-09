@@ -1,7 +1,7 @@
 /* Estilos globales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1bb4db;
     color: #333;
 }
 
@@ -10,32 +10,32 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    background-color: #333;
+    background-color: #4a0083;
     padding: 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(12, 12, 12);
     text-decoration: none;
     padding: 10px 20px;
 }
 
 nav ul li a:hover {
-    background-color: #555555;
+    background-color: #000000;
 }
 
 /* Estilos para los encabezados */
 h1 {
-    color: #4CAF50;
+    color: #f69002;
 }
 
 h2 {
-    color: #2196F3;
+    color: #020304;
 }
 
 /* Estilo para el formulario */
 form {
-    background-color: white;
+    background-color: rgb(14, 222, 163);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -50,12 +50,12 @@ input, textarea {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #4a0083;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #4a0083;
 }
