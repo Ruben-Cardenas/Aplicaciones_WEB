@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="styles_pago.css">
+</head>
+<body>
+    <header>
+        <h1>Proceso de Pago</h1>
+    </header>
+
+    <section id="carrito">
+        <h2>Productos en tu carrito</h2>
+        <div id="lista-carrito-pago"></div>
+        <h3>Métodos de Pago</h3>
+        <div class="metodos-pago">
+            <label><input type="radio" name="metodo" value="Tarjeta de crédito"> Tarjeta de crédito</label><br>
+            <label><input type="radio" name="metodo" value="PayPal"> PayPal</label><br>
+            <label><input type="radio" name="metodo" value="Transferencia bancaria"> Transferencia bancaria</label><br>
+        </div>
+        <button id="confirmar-pago">Confirmar Pago</button>
+    </section>
+
+    <script>
+        // Llenar el carrito en la página de pago
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const listaCarritoPago = document.getElementById('lista-carrito-pago');
+
+        if (carrito.length === 0) {
+            listaCarritoPago.innerHTML = '<p>No hay productos en el carrito.</p>';
+        } else {
+            carrito.forEach(producto => {
+                const div = document.createElement('div');
+                div.className = 'producto-en-carrito';
+                div.innerHTML = `
+                    <img src="assets/imagenes/${producto.imagene}" alt="${producto.producto}">
+                    <div class="producto-info">
+                        <h3>${producto.producto}</h3>
+                        <p>Precio: $${producto.precio}</p>
+                        <p>Cantidad: ${producto.cantidad}</p>
+                        <p>Total: $${producto.precio * producto.cantidad}</p>
+                    </div>
+                    
+                `;
+                listaCarritoPago.appendChild(div);
+            });
+        }
+
+        document.getElementById('confirmar-pago').onclick = function() {
+            alert('Pago confirmado. Gracias por tu compra!');
+            localStorage.removeItem('carrito');
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
+
+
+

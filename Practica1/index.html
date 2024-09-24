@@ -3,53 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI primera paguina</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al stylsheet de la página (completar) -->
-    <img src="leon" alt="leon" width="1500" height="300">
+    <title>Tienda de Tenis</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
+    <header class="encabezado">
+        <div class="slider">
+            <img src="assets/slider/T1.jpg" alt="encabezado1" class="slide active">
+            <img src="assets/slider/T2.jpg" alt="encabezado2" class="slide">
+            <img src="assets/slider/T3.jpg" alt="encabezado3" class="slide">
+        </div>
+        <div class="carrito">
+            <a href="carrito.html"><img src="assets/imagenes/Carrito.jpeg" alt="Carrito de compras"></a>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
     <nav>
         <ul>
             <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#sobre mi">Sobre mi</a></li>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#galeria-productos">Productos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            
         </ul>
     </nav>
 
-    <!-- Sección principal -->
     <section id="Inicio">
-        <h1>Paguina sobre mi</h1>
-        <p>En esta paguina se describa el usuario donde se dara el contacto y la descipcion de la personq</p>
+        <h1>Bienvenido a nuestra tienda de tenis</h1>
+        <p>Ofrecemos una amplia variedad de tenis de las mejores marcas. Aquí encontrarás estilos que se adaptan a tu vida diaria, desde modelos deportivos hasta casuales.</p>
     </section>
 
-    <!-- Sección "Sobre mí" -->
-    <section id="sobre mi">
-        <h2>Cosas sobre mi</h2>
-        <ul>
-            <li> Soy alto</li>
-            <li> Tengo el pelo cafe </li>
-            <li> Mis ojos son de color cafe </li>
-            <a href="https://docs.google.com/" target=" _blank">Google</a>
-        </ul>
+    <section id="galeria-productos">
+        <h2>Nuestros productos</h2>
+        <div class="galeria">
+            <div class="productos">
+                <img src="assets/imagenes/producto 1.jpg" alt="Tenis 1">
+                <h3>Tenis Deportivo Max</h3>
+                <p>Estos tenis son ideales para actividades deportivas gracias a su suela antideslizante y su alta resistencia. Perfectos para corredores y deportistas.</p>
+                <p class="precio">$1200.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad1">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis Deportivo Max', 1200, document.getElementById('cantidad1').value)">Comprar</button>
+            </div>
+            <div class="productos">
+                <img src="assets/imagenes/producto 2.jpg" alt="Tenis 2">
+                <h3>Tenis Casual Urban</h3>
+                <p>Estilo y confort se combinan en estos tenis casuales. Su diseño moderno es perfecto para el día a día en la ciudad.</p>
+                <p class="precio">$1600.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad2">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis Casual Urban', 1600, document.getElementById('cantidad2').value)">Comprar</button>
+            </div>
+            <div class="productos">
+                <img src="assets/imagenes/producto 3.jpg" alt="Tenis 3">
+                <h3>Tenis de Lujo Elite</h3>
+                <p>Confeccionados con materiales premium, estos tenis combinan elegancia y comodidad para cualquier ocasión especial.</p>
+                <p class="precio">$1700.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad3">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis de Lujo Elite', 1700, document.getElementById('cantidad3').value)">Comprar</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Formulario de contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form action="#" method="post">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Correo</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Comentarios</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            <br>
-            <input type="submit" value="Enviar informacion">
-        </form>
-    </section>
+    <script src="sliders.js"></script>
 </body>
 </html>
