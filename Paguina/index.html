@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tenis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Tienda de Tenis</h1>
+        <nav>
+            <ul>
+                <li><a href="#Inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                <li><a href="#quienes-somos" onclick="mostrarSeccion('quienes-somos')">Quiénes somos</a></li>
+                <li><a href="#galeria-productos" onclick="mostrarSeccion('galeria')">Productos</a></li>
+                <li><a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <a href="#" onclick="mostrarCarrito()">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <section id="Inicio" class="seccion" style="display: block;">
+        <h2>Bienvenido a nuestra tienda de tenis</h2>
+        <p>Ofrecemos una amplia variedad de tenis de las mejores marcas.</p>
+    </section>
+
+    <section id="galeria-productos" class="seccion ocultar">
+        <h2>Nuestros productos</h2>
+        <div class="galeria">
+            <div class="productos">
+                <img src="assets/imagenes/producto 1.jpg" alt="Tenis 1">
+                <h3>Tenis Deportivo Max</h3>
+                <p>Ideales para actividades deportivas.</p>
+                <p class="precio">$1200.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad1">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis Deportivo Max', 1200, document.getElementById('cantidad1').value)">Comprar</button>
+            </div>
+            <div class="productos">
+                <img src="assets/imagenes/producto 2.jpg" alt="Tenis 2">
+                <h3>Tenis Casual Urban</h3>
+                <p>Estilo y confort para el día a día.</p>
+                <p class="precio">$1600.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad2">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis Casual Urban', 1600, document.getElementById('cantidad2').value)">Comprar</button>
+            </div>
+            <div class="productos">
+                <img src="assets/imagenes/producto 3.jpg" alt="Tenis 3">
+                <h3>Tenis de Lujo Elite</h3>
+                <p>Combinan elegancia y comodidad.</p>
+                <p class="precio">$1700.00</p>
+                <input type="number" min="1" value="1" class="cantidad" id="cantidad3">
+                <button class="comprar-btn" onclick="agregarAlCarrito('Tenis de Lujo Elite', 1700, document.getElementById('cantidad3').value)">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrito" class="seccion ocultar">
+        <h2>Productos en tu carrito</h2>
+        <div id="lista-carrito">
+            <!-- Los productos añadidos al carrito aparecerán aquí -->
+        </div>
+        <button id="checkout-btn" onclick="mostrarPago()">Proceder al Pago</button>
+    </section>
+
+    <section id="pago" class="seccion ocultar">
+        <h2>Proceso de Pago</h2>
+        <div id="lista-carrito-pago"></div>
+        <h3>Métodos de Pago</h3>
+        <div class="metodos-pago">
+            <label><input type="radio" name="metodo" value="Tarjeta de crédito"> Tarjeta de crédito</label><br>
+            <label><input type="radio" name="metodo" value="PayPal"> PayPal</label><br>
+            <label><input type="radio" name="metodo" value="Transferencia bancaria"> Transferencia bancaria</label><br>
+        </div>
+        <button id="confirmar-pago">Confirmar Pago</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

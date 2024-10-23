@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Trabajadores - Constructora Canese</title>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+        /* Estilo del body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #332629;
+            color: #DB9146;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            margin: 50px auto;
+            background: linear-gradient(to right, #5C5448, #704214);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Estilo de la cabecera con imagen */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #DB9146;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #704214;
+            color: white;
+        }
+
+        td {
+            background-color: #5C5448;
+            color: #e6dfd7;
+        }
+
+        /* Botones */
+        .btn-group {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #DB9146;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #704214;
+        }
+
+        /* Animación de FadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container animate__animated animate__fadeIn">
+        <!-- Cabecera con imagen -->
+        <div class="header">
+            <h2>Gestión de Trabajadores</h2>
+            <img src="logo.png" alt="Logo Constructora Canese">
+        </div>
+
+        <!-- Tabla de trabajadores -->
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Número de Empleado</th>
+            </tr>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>Administrador</td>
+                <td>555-1234</td>
+                <td>juan@123.com</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>Ana Gómez</td>
+                <td>Obrero</td>
+                <td>555-5678</td>
+                <td>ana@123.com</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>Carlos Ruiz</td>
+                <td>Ingeniero</td>
+                <td>555-9876</td>
+                <td>carlos@123.com</td>
+                <td>003</td>
+            </tr>
+            <tr>
+                <td>Lucía Martínez</td>
+                <td>Contadora</td>
+                <td>555-5432</td>
+                <td>lucia@123.com</td>
+                <td>004</td>
+            </tr>
+        </table>
+
+        <!-- Botones de acciones -->
+        <div class="btn-group">
+            <button class="btn">Insertar</button>
+            <button class="btn">Actualizar</button>
+            <button class="btn">Eliminar</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión Clientes - Constructora Canese</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Loaded&display=swap');
+        body {
+            font-family: 'Loaded', sans-serif;
+            background-color: #332629;
+            color: #DB9146;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #5C5448;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            text-align: center;
+            color: #DB9146;
+        }
+        input[type="text"], input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #848250;
+            background-color: #332629;
+            color: #DB9146;
+        }
+        button {
+            background-color: #704214;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="logo.jpg" alt="Logo Constructora Canese" class="logo">
+        <h2>Inicio de Sesión - Clientes</h2>
+        <form>
+            <input type="text" placeholder="Correo" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>
